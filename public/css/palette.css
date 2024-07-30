@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600&display=swap');
+
+:root {
+  /* color */
+  --color-light-gray: #d9dddf;
+  --color-navy: #2C314D;
+  --color-light-blue: #F4F6F8;
+  --color-skyblue: #E8F3FF;
+  --color-gray: #707070;
+  --color-mint: #39A2C0;
+  --color-border-gray: #dadee0;
+
+  /* Font weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 500;
+
+  /* size */
+  --size-border-radius: 4px;
+
+  /* animation */
+  --animation-duration: 300ms;
+}
+
+* {
+  user-select: none;
+  box-sizing: border-box;
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Noto Sans KR', sans-serif;
+}

@@ -1,0 +1,2 @@
+/var/spool/slurmd/job00156/slurm_script: line 12: [: ==: unary operator expected
+slurmstepd: error: *** JOB 156 ON node20 CANCELLED AT 2024-06-10T16:33:54 ***

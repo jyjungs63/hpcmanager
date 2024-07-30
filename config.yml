@@ -1,0 +1,6 @@
+uploadlimit: 10000000
+root: ./Redis-Go
+port: :3200
+readonly: false
+preview: ""
+datafolder: ./leadship

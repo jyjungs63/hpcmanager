@@ -1,0 +1,29 @@
+Starting local server: /appl/Siemens/11.06.010-R8/STAR-CCM+11.06.010-R8/star/bin/starccm+ -mpi intel -power -machinefile nodelist -np 1 -server -rsh ssh /home/leadship/999platform/Works/GEOM_Test.sim
+Starting STAR-CCM+ parallel server
+MPI Distribution : Intel MPI-5.0-3
+Host 0 -- node20 -- Ranks 0
+Process rank 0 node20 53760
+Total number of processes : 1
+
+STAR-CCM+ 11.06.010 (linux-x86_64-2.5/gnu4.8-r8)
+License build date: 10 February 2015
+This version of the code requires license version 2016.10 or greater.
+Checking license file: 1999@172.10.0.10
+1 copy of ccmppower checked out from 1999@172.10.0.10
+Feature ccmppower expires in 185 days
+Wed Jun 12 12:17:08 2024
+
+Server::start -host node20.kmaster.nis.com:47827
+Loading object database: /home/leadship/999platform/Works/GEOM_Test.sim
+Loading module: StarMeshing
+Loading module: MeshingSurfaceRepair
+Simulation database saved by:
+  STAR-CCM+ 11.06.010 (win64/intel15.0) Tue Oct 4 19:59:23 UTC 2016 Serial 
+Loading into:
+  STAR-CCM+ 11.06.010 (linux-x86_64-2.5/gnu4.8-r8) Tue Oct 4 19:59:23 UTC 2016 Np=1
+Object database load completed.
+Playing macro: /home/leadship/jymanager/VTT_CCM_Resistance_V20.java
+error: Could not open macro file: VTT_CCM_Resistance_V20.java
+
+Design STAR-CCM+ simulation completed
+Server process exited with code : 0

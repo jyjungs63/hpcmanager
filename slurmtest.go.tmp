@@ -1,0 +1,44 @@
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os/exec"
+	"strings"
+)
+
+func main() {
+	// sbatch 명령과 인수들을 정의합니다.
+	cmd := exec.Command("sbatch", "--job-name=my_job", "my_script.sh")
+
+	// 명령을 실행하고 결과를 받기 위한 파이프를 생성합니다.
+	stdoutPipe, err := cmd.StdoutPipe()
+	if err != nil {
+		fmt.Println("표준 출력 파이프 생성 실패:", err)
+		return
+	}
+
+	// 명령을 실행합니다.
+	if err := cmd.Start(); err != nil {
+		fmt.Println("명령 실행 실패:", err)
+		return
+	}last
+
+	// 표준 출력을 읽어 작업 ID를 추출합니다.
+	scanner := bufio.NewScanner(stdoutPipe)
+	for scanner.Scan() {
+		line := scanner.Text()
+		// 작업 ID는 "Submitted batch job {job_id}" 형식으로 나옵니다.
+		if strings.HasPrefix(line, "Submitted batch job") {
+			parts := strings.Fields(line)
+			jobID := parts[len(parts)-1]
+			fmt.Println("작업 ID:", jobID)
+			break
+		}
+	}
+
+	// 명령이 완료될 때까지 대기합니다.
+	if err := cmd.Wait(); err != nil {
+		fmt.Println("명령 완료 대기 실패:", err)
+	}
+}

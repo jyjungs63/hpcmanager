@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <title>HPC Job Manager</title>
+
+    <!-- jQuery 3.7.1 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./css/login.css">
+    <link rel="stylesheet" type="text/css" href="./css/common.css">
+    <script type="text/javascript" src="./js/common.js"></script>
+</head>
+
+<body>
+    <div class="header"></div>
+    <div id="wrap">
+        <div class="logo">
+            <img src="./lib/images/leadship.png" alt="logo">
+        </div>
+        <div class="container">
+            <div class="select-box">
+                <p>Select Company</p>
+                <select>
+                    <option>KRISO</option>
+                    <option>케이조선</option>
+                    <option>대한조선</option>
+                    <option>HJ중공업</option>
+                    <option>대선조선</option>
+                    <option>극동선박설계</option>
+                </select>
+            </div>
+
+            <div class="input-box">
+                <p>User ID</p>
+                <input id="user_id" type="text" name="user_id">
+            </div>
+
+            <div class="input-box">
+                <p>Password</p>
+                <input id="password" type="password" name="password">
+            </div>
+            <button id="btnLogin" type="button" class="btn-login">Login</button>
+        </div>
+    </div>
+    <div class="footer"></div>
+</body>
+
+<script>
+
+    $("#btnLogin").click(function () {
+
+        var data = { Id: $("#user_id").val(), Passwd: $("#password").val() }
+        var res = callAjax("leadLogin", data, $("#user_id").val())
+
+    });
+</script>
+
+</html>

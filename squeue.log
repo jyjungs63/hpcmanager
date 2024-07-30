@@ -1,0 +1,7 @@
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+               311     batch SlurmTES    mgsim PD       0:00      6 (Resources)
+               312     batch SlurmTES    mgsim PD       0:00      6 (Priority)
+               313     batch SlurmTES    mgsim PD       0:00      6 (Priority)
+               308     batch SlurmTES    mgsim  R       0:48      6 node[1-6]
+               309     batch SlurmTES    mgsim  R       0:39      6 node[7-12]
+               310     batch SlurmTES    mgsim  R       0:30      6 node[13-18]
